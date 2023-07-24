@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors";
+// import cors from "cors";
 import morgan from "morgan";
 import userRoutes from "./api/user_route.js";
 import taskRoutes from "./api/task_route.js";
@@ -10,7 +10,7 @@ dotenv.config(".env");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan(":method - :url - :date - :response-time ms"));
 

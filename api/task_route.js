@@ -47,7 +47,6 @@ taskRoutes.put("/task/update/:id", protectApi, async (req, res) => {
     console.log(id);
     let update = req.body;
     const action = await Task.findByIdAndUpdate(id, update);
-    console.log(action);
     return res.json(action ? { result: true } : { result: false });
   } catch (error) {
     res.status(401).json({ error });
